@@ -11,7 +11,7 @@ For Users Dev Setup
 
 #To Build and Run the project
 
-    Buiild with mvn clean install or mvn clean package
+    Build with mvn clean install or mvn clean package
     Run the project with mvn spring-boot:run
 Running mvn spring-boot:run will build and create a prompt for the user.
 Please follow the instructions from the prompt to test out the program
