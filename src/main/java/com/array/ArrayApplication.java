@@ -11,7 +11,7 @@ public class ArrayApplication {
 		SpringApplication.run(ArrayApplication.class, args);
 		ArrayReader arrayReader = new ArrayReader();
 		int [] p = {};
-		arrayReader.readArray();
+		arrayReader.calculateOutCome();
 	}
 
 }

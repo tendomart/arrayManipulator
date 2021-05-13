@@ -5,39 +5,30 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
-@Component
 public class ArrayReader {
-    //Number of Integers (0 to 100000)
-    public int [] a = new int[10];
 
-    public int [] compareList = new int[10];
+    int [] a = new int [100000];
 
-    public int distinctCount = 0;
-
-    public void readArray(){
+    public ArrayList<Integer> readArray(){
+       ArrayList list = new ArrayList<Object>();
         Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter integer :\n");
-        // N can be any number between -1000000 to 1000000
-        compareList = a;
-        for(int i = 0;  i < a.length ; i++){
-            for(int j = i + 1; j < a.length ; j++) {
-                if( (a[i] == a[j]) && (i != j) ) {
-                    a[i] = scan.nextInt();
-//                    compareList[i] = a[i];
-                    distinctCount = distinctCount + 1;
-                    System.out.println("If you want to exit please press X otherwise continue : \n");
-                    if (new Scanner(System.in).nextLine().contains("X".toLowerCase())) {
-                        System.out.println(Arrays.toString(a));
-                        return;
-                    }
-                }
+        System.out.println("Please type integer :\n");
+        while (list.size() < a.length) {
+            list.add(scan.nextInt());
+            System.out.println("If you want to stop press zero(0) and enter :\n");
+            if (list.contains(0)) {
+                return list;
             }
         }
-
-        System.out.println(Arrays.toString(a));
+        return list;
     }
 
+    public void calculateOutCome() {
+        System.out.println("Please type integer :\n");
+        a = readArray().stream().distinct().mapToInt(i -> i).toArray();
+        System.out.println("The Distinct values are \n" + Arrays.toString(a));
+    }
 }
+
+

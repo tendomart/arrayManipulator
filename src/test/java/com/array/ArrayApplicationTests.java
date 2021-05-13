@@ -4,6 +4,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.io.StringWriter;
+import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 @SpringBootTest
 class ArrayApplicationTests {
 
@@ -14,8 +19,5 @@ class ArrayApplicationTests {
 		 arrayReader = new ArrayReader();
 	}
 
-	@Test
-	public void shouldReadArray(){
-
-	}
+	public void shouldReadArray(){ }
 }
