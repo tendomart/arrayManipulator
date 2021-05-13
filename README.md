@@ -1,5 +1,6 @@
 # arrayManipulator
-It takes in an array of ints , picks out distinct values and prints the out put
+ArrayManipulator is a simple program which takes in an array of ints ,
+picks out distinct values and prints the out put
 
 #Technical information and specifications
 
